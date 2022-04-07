@@ -11,6 +11,7 @@
 
 def main():
 
+    #Take user input and check that it is an int (not a string or float), and positive.
     while True:
         try:
             a = int(input("Please enter the value for A: "))
@@ -20,10 +21,13 @@ def main():
             print("The value cannot be negative. Try again...")
         except ValueError:
             print("That wasn't a whole number in digits. Try again...")
-        
+
+    #Prepare loop variables from the user input.    
     iter1 = a 
     iter2 = a+1
     iter3 = a+2
+
+    #Take user input and check that it is an int (not a string or float), and positive.
     while True:
         try:
             x = int(input("Please enter the value for X: "))
@@ -33,10 +37,13 @@ def main():
             print("The value cannot be negative. Try again...")
         except ValueError:
             print("That wasn't a whole number in digits. Try again...")
+
+    #Prepare loop variables from the user input. 
     goal1 = x
     goal2 = x*2
     goal3 = x*3
 
+    #Loops
     print("Multiples of A until X")
     while iter1 <= goal1:
         print(iter1)
