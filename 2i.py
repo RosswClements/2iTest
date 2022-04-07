@@ -4,15 +4,35 @@
 # Please state any assumptions you’ve made.
 
 
-#Aussiming that until X means that I should not print anything exceeding X. 
+#Assuming that until X means that I should not print anything exceeding X. 
+#Assuming that the values must be an full number instead of a float. 
+#Assuming that the values must be positive.
+
 
 def main():
 
-    a = 2
+    while True:
+        try:
+            a = int(input("Please enter the value for A: "))
+            assert a > 0
+            break
+        except AssertionError:
+            print("The value cannot be negative. Try again...")
+        except ValueError:
+            print("That wasn't a whole number in digits. Try again...")
+        
     iter1 = a 
     iter2 = a+1
     iter3 = a+2
-    x = 15
+    while True:
+        try:
+            x = int(input("Please enter the value for X: "))
+            assert x > 0
+            break
+        except AssertionError:
+            print("The value cannot be negative. Try again...")
+        except ValueError:
+            print("That wasn't a whole number in digits. Try again...")
     goal1 = x
     goal2 = x*2
     goal3 = x*3
